@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7A2B42;
+  --color-secondary: #FDFBF7;
+  --color-accent: #87A04B;
+  --color-dark: #2D1B20;
+  --color-primary-light: #A23D58;
+  --color-accent-pale: #E9F2D0;
+  
+  --font-sans: 'Inter', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
+  
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 10px 40px -4px rgba(0, 0, 0, 0.08);
+  
+  --radius-pill: 100px;
+
+  --background-image-primary-gradient: linear-gradient(135deg, #7A2B42 0%, #A23D58 100%);
+  --background-image-footer-gradient: linear-gradient(180deg, #2D1B20 0%, #1A0A0E 100%);
+}
+
+@layer base {
+  body {
+    @apply bg-secondary text-dark antialiased;
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-3 rounded-full font-medium transition-all duration-300 inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+  
+  .btn-primary {
+    @apply bg-[image:--background-image-primary-gradient] text-white hover:shadow-premium hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .wavy-divider {
+    @apply relative w-full overflow-hidden leading-[0];
+  }
+  
+  .wavy-divider svg {
+    @apply relative block w-[calc(100%+1.3px)] h-[50px];
+  }
+  
+  .card {
+    @apply bg-white rounded-3xl p-8 shadow-soft transition-all duration-500 hover:shadow-premium hover:-translate-y-2;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7A2B42;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A23D58;
+}
