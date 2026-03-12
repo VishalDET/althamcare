@@ -5,39 +5,39 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const Services = () => {
   const services = [
-    { 
-      title: 'Assisted Living', 
-      icon: Activity, 
+    {
+      title: 'Assisted Living',
+      icon: Activity,
       desc: 'Our assisted living program provides help with daily activities while encouraging social engagement and independence.',
       features: ['24/7 personal care', 'Laundry & housekeeping', 'Nutritional meal plans']
     },
-    { 
-      title: 'Dementia Care', 
-      icon: Shield, 
+    {
+      title: 'Dementia Care',
+      icon: Shield,
       desc: 'A safe, calm, and supportive environment specifically designed for residents living with Alzheimer’s or other forms of dementia.',
       features: ['Memory enhancement programs', 'Safe & secure garden', 'Consistent staffing']
     },
-    { 
-      title: 'Respite Care', 
-      icon: Heart, 
+    {
+      title: 'Respite Care',
+      icon: Heart,
       desc: 'Short-term care options designed to give primary caregivers a much-needed break while ensuring the senior is well cared for.',
       features: ['Custom stay durations', 'Full amenity access', 'Transition support']
     },
-    { 
-      title: 'Rehabilitation', 
-      icon: Target, 
+    {
+      title: 'Rehabilitation',
+      icon: Target,
       desc: 'Intensive therapy and support for those recovering from surgery, stroke, or injury to regain mobility and independence.',
       features: ['Physical therapy', 'Occupational therapy', 'Speech therapy']
     },
-    { 
-      title: 'Daily Assistance', 
-      icon: Coffee, 
+    {
+      title: 'Daily Assistance',
+      icon: Coffee,
       desc: 'Providing dignified support with errands, companionship, and routine household management to make life easier.',
       features: ['Errand assistance', 'Companionship', 'Hobby facilitation']
     },
-    { 
-      title: 'Medical Monitoring', 
-      icon: Thermometer, 
+    {
+      title: 'Medical Monitoring',
+      icon: Thermometer,
       desc: 'Advanced medical oversight by on-site nursing staff, coordinating with external medical professionals and families.',
       features: ['Medication management', 'Vital signs tracking', 'Doctor coordination']
     }
@@ -55,7 +55,7 @@ const Services = () => {
           >
             <Sparkles className="text-accent-pale" size={32} />
           </motion.div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -63,7 +63,7 @@ const Services = () => {
           >
             Our <span className="text-accent-pale">Services</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -72,7 +72,7 @@ const Services = () => {
             "Comprehensive, person-centered services designed to support physical, emotional, and social health."
           </motion.p>
         </div>
-        
+
         {/* Wavy Divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(110%+1.3px)] h-[80px] fill-white">
@@ -132,12 +132,12 @@ const Services = () => {
                 As a non-profit driven organization, Altham Care Home relies on the generous contributions of our community. Your support directly funds our resident activity programs and facility upgrades.
               </p>
               <div className="flex flex-wrap gap-6">
-                <button className="btn btn-primary px-12 py-5 shadow-premium">Donate Now</button>
+                <button className="btn bg-accent text-white px-12 py-5 shadow-premium">Donate Now</button>
                 <button className="btn bg-white border-2 border-accent text-accent hover:bg-accent hover:text-white px-12 py-5 rounded-full font-black uppercase tracking-widest transition-all">Volunteer</button>
               </div>
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal direction="left" delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[

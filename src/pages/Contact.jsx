@@ -16,7 +16,7 @@ const Contact = () => {
           >
             <Headset className="text-accent-pale" size={32} />
           </motion.div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -24,7 +24,7 @@ const Contact = () => {
           >
             Get In <span className="text-accent-pale">Touch</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -33,7 +33,7 @@ const Contact = () => {
             "We are always here to help. Reach out to us for any inquiries or to schedule a professional visit."
           </motion.p>
         </div>
-        
+
         {/* Wavy Divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(110%+1.3px)] h-[80px] fill-white">
@@ -72,7 +72,7 @@ const Contact = () => {
                   <label className="text-xs font-black uppercase tracking-widest text-dark/40 ml-4">Your Message</label>
                   <textarea rows="6" placeholder="How can we help you?" className="w-full px-8 py-5 rounded-[2rem] bg-secondary border-2 border-transparent focus:border-primary/20 focus:bg-white outline-none transition-all placeholder:text-dark/20 font-bold shadow-soft resize-none"></textarea>
                 </div>
-                <button className="btn btn-primary w-full py-6 text-sm font-black uppercase tracking-widest shadow-premium">
+                <button className="btn bg-dark text-white px-16 py-6 text-sm uppercase tracking-widest font-black shadow-premium">
                   Send Message <Send size={20} />
                 </button>
               </form>
@@ -98,7 +98,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-8 group text-white">
-                   <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20 group-hover:bg-white group-hover:text-primary transition-all">
+                  <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20 group-hover:bg-white group-hover:text-primary transition-all">
                     <Phone size={32} />
                   </div>
                   <div>
