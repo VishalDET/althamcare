@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Activity, Shield, Users, Coffee, Thermometer, ArrowRight, Check, Target, Sparkles } from 'lucide-react';
+import { Heart, Activity, Shield, Users, Coffee, ArrowRight, Check, Target, Sparkles, Wifi, Gamepad2, Mic2, Star } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const Services = () => {
+  useEffect(() => {
+    document.title = "Our Care Services | Altham Care Home Accrington";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Explore our elderly care services including Assisted Living, Dementia Care, Respite Care, Rehabilitation, and daily activities/entertainment programs.");
+    }
+  }, []);
+
   const services = [
     {
       title: 'Assisted Living',
@@ -36,10 +44,10 @@ const Services = () => {
       features: ['Errand assistance', 'Companionship', 'Hobby facilitation']
     },
     {
-      title: 'Medical Monitoring',
-      icon: Thermometer,
-      desc: 'Advanced medical oversight by on-site nursing staff, coordinating with external medical professionals and families.',
-      features: ['Medication management', 'Vital signs tracking', 'Doctor coordination']
+      title: 'Entertainment & Activities',
+      icon: Users,
+      desc: 'Keeping minds active and spirits high through our robust selection of technology, classic games, professional entertainers, and creative crafts.',
+      features: ['Wi-Fi & iPad gaming', 'Live singers & choirs', 'Daily baking & crafts']
     }
   ];
 
@@ -113,7 +121,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Community Impact Section */}
+      {/* Entertainment and Activities Section */}
       <section className="relative py-32 bg-secondary/40">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-white">
@@ -121,43 +129,73 @@ const Services = () => {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <ScrollReveal direction="right">
-            <div className="space-y-10 relative z-10">
-              <div className="space-y-4">
-                <span className="text-primary font-black tracking-[0.3em] uppercase text-xs">Empowering People</span>
-                <h2 className="text-5xl lg:text-7xl font-black tracking-tighter uppercase italic">Charity & <span className="text-accent not-italic">Community</span></h2>
-              </div>
-              <p className="text-xl text-dark/70 font-bold italic leading-relaxed">
-                As a non-profit driven organization, Altham Care Home relies on the generous contributions of our community. Your support directly funds our resident activity programs and facility upgrades.
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 space-y-16">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto space-y-6">
+              <span className="text-primary font-black tracking-[0.3em] uppercase text-xs">Life at Altham Care Home</span>
+              <h2 className="text-5xl lg:text-7xl font-black tracking-tighter uppercase italic">Entertainment & <span className="text-accent not-italic">Activities</span></h2>
+              <div className="w-24 h-2 bg-accent mx-auto rounded-full" />
+              <p className="text-dark/60 text-xl font-bold italic">
+                Keeping active, engaged, and connected is central to our day-to-day philosophy.
               </p>
-              <div className="flex flex-wrap gap-6">
-                <button className="btn bg-accent text-white px-12 py-5 shadow-premium">Donate Now</button>
-                <button className="btn bg-white border-2 border-accent text-accent hover:bg-accent hover:text-white px-12 py-5 rounded-full font-black uppercase tracking-widest transition-all">Volunteer</button>
-              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal direction="left" delay={0.2}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {[
-                { count: '500+', label: 'Residents Supported', icon: Heart, color: 'primary' },
-                { count: '50+', label: 'Care Professionals', icon: Users, color: 'accent' },
-                { count: '10+', label: 'Years of Excellence', icon: Activity, color: 'dark' },
-                { count: '100%', label: 'Dedicated Support', icon: Shield, color: 'primary' }
-              ].map((stat, i) => (
-                <div key={i} className="bg-white p-10 rounded-[3rem] shadow-premium border border-dark/5 space-y-4 transform hover:-translate-y-2 transition-all">
-                  <div className={`w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-${stat.color}`}>
-                    <stat.icon size={32} />
-                  </div>
-                  <div>
-                    <h4 className={`text-4xl font-black text-${stat.color} tracking-tighter`}>{stat.count}</h4>
-                    <p className="text-dark/40 font-black uppercase tracking-widest text-xs">{stat.label}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <ScrollReveal direction="right">
+              <div className="bg-white p-10 rounded-[3rem] shadow-premium border border-dark/5 space-y-6 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-primary">
+                  <Wifi size={32} />
                 </div>
-              ))}
-            </div>
-          </ScrollReveal>
+                <h3 className="text-2xl font-black uppercase italic tracking-tight">Embracing New Technology</h3>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  At Altham Care Home, our team is always looking for fresh and exciting ways to keep our residents entertained and their minds active, and technology plays a big part in that.
+                </p>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  One of the first improvements we made was installing Wi-Fi throughout the home. This has made a real difference, giving residents the freedom to use their own mobile devices whenever they wish. We also provide iPads loaded with games and other apps for entertainment. Best of all, our home-wide Wi-Fi means residents can stay in touch with family and friends whenever and wherever they like.
+                </p>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  More recently, we've fitted our lounges with large TV, so residents can enjoy whatever they fancy watching, from live football matches to their favourite soaps like 'Corrie'.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={0.1}>
+              <div className="bg-white p-10 rounded-[3rem] shadow-premium border border-dark/5 space-y-6 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-accent">
+                  <Gamepad2 size={32} />
+                </div>
+                <h3 className="text-2xl font-black uppercase italic tracking-tight">Games</h3>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  The activities we choose vary from day to day, keeping things fresh and interesting for everyone. Our residents love playing a whole range of games, from Scrabble, dominoes and hangman to Play Your Cards Right. These traditional games are a lovely way for our residents to reminisce about the days before electronic devices came along.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="bg-white p-10 rounded-[3rem] shadow-premium border border-dark/5 space-y-6 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-dark">
+                  <Mic2 size={32} />
+                </div>
+                <h3 className="text-2xl font-black uppercase italic tracking-tight">Entertainers</h3>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  We're lucky to welcome entertainers from all sorts of backgrounds to Altham Care Home to perform for our residents. From wonderful solo singers to local school choirs, there's always a great variety of acts to enjoy, and our residents love the chance to sit back and be entertained.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={0.3}>
+              <div className="bg-white p-10 rounded-[3rem] shadow-premium border border-dark/5 space-y-6 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-primary">
+                  <Star size={32} fill="currentColor" />
+                </div>
+                <h3 className="text-2xl font-black uppercase italic tracking-tight">Getting Involved</h3>
+                <p className="text-dark/70 font-medium leading-relaxed text-base italic">
+                  Our residents love getting stuck into all kinds of activities. Our cook enjoys involving them in a spot of baking, with a delicious final product to enjoy at the end. Craft activities are another firm favourite. Residents also love a bit of pampering, from manicures and beauty sessions to visits from our hairdresser, who's always happy to encourage them to try out a new style.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

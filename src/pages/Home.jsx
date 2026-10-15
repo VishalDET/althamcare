@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Shield, Users, Clock, ArrowRight, Star, Quote, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import ScrollReveal from '../components/ScrollReveal';
-import heroImg from '../assets/images/hero.png';
-import aboutImg from '../assets/images/about.png';
+import heroImg from '../assets/images/rimages/DJI_0045.JPG';
+import aboutImg from '../assets/images/rimages/DJI_0048.JPG';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Altham Care Home | Residential & Respite Care in Accrington, Lancashire";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Altham Care Home offers high-quality, family-owned residential and respite elderly care in Accrington, Lancashire. Contact us on 01254 396 015.");
+    }
+  }, []);
+
   return (
     <div className="overflow-hidden bg-secondary">
       {/* Premium Hero Section */}
@@ -71,7 +79,7 @@ const Home = () => {
             <div className="relative">
               <div className="absolute -inset-6 bg-accent/20 rounded-[3rem] -rotate-3" />
               <img src={aboutImg} alt="Residents smiling" className="relative rounded-[2.5rem] shadow-premium z-10 w-full border-8 border-white" />
-              <div className="absolute -bottom-10 -right-10 bg-[image:--background-image-primary-gradient] p-10 rounded-3xl shadow-premium z-20 hidden xl:block max-w-sm text-white">
+              {/* <div className="absolute -bottom-10 -right-10 bg-[image:--background-image-primary-gradient] p-10 rounded-3xl shadow-premium z-20 hidden xl:block max-w-sm text-white">
                 <Quote className="mb-4 text-white/30" size={40} fill="currentColor" />
                 <p className="text-xl font-medium italic leading-relaxed">"The most caring environment I've ever experienced for my parents."</p>
                 <div className="mt-6 pt-6 border-t border-white/20 flex items-center justify-between">
@@ -80,7 +88,7 @@ const Home = () => {
                     {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </ScrollReveal>
 
@@ -98,7 +106,7 @@ const Home = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-4">
                 {[
                   'Personalized Care Plans',
-                  '24/7 Professional Support',
+                  'Open 24 Hours, 7 Days',
                   'Vibrant Community Life',
                   'Beautiful Landscapes'
                 ].map((item, i) => (
@@ -137,9 +145,9 @@ const Home = () => {
             {[
               { icon: Heart, title: 'Assisted Living', desc: 'Personalized support with daily tasks in a vibrant community setting.' },
               { icon: Shield, title: 'Dementia Care', desc: 'Specialized, secure care for those living with memory loss conditions.' },
-              { icon: Clock, title: '24/7 Medical Support', desc: 'Round-the-clock professional medical monitoring and nursing care.' },
-              { icon: Users, title: 'Community Activities', desc: 'A rich calendar of social events, hobbies, and group excursions.' },
-              { icon: Heart, title: 'Rehabilitation Support', desc: 'Post-surgery or illness recovery programs designed by specialists.' },
+              { icon: Clock, title: 'Respite Care', desc: 'Short-term care options designed to give primary caregivers a much-needed break.' },
+              { icon: Users, title: 'Entertainment & Activities', desc: 'Keeping minds active with games, singers, local choirs, and tech features.' },
+              { icon: Heart, title: 'Rehabilitation Support', desc: 'Post-surgery or illness recovery support to regain independence.' },
               { icon: Shield, title: 'Personal Care', desc: 'Dignified assistance with bathing, dressing, and hygiene.' }
             ].map((service, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>

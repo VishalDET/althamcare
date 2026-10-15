@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, Headset } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact Us | Book a Visit to Altham Care Home";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Get in touch with Altham Care Home in Accrington, Lancashire. Call 01254 396 015, email info@althamcare.co.uk or book a personal tour today.");
+    }
+  }, []);
+
   return (
     <div className="pt-0">
       {/* Premium Gradient Header */}
@@ -94,7 +102,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-black uppercase tracking-widest text-accent-pale mb-2">Office Address</h4>
-                    <p className="text-xl font-bold leading-relaxed italic">Althamcare Lane, Burnley Road, Lancashire, England, BB12 7RT</p>
+                    <p className="text-xl font-bold leading-relaxed italic">Burnley Road, Accrington, BB5 5TW</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-8 group text-white">
@@ -103,7 +111,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-black uppercase tracking-widest text-accent-pale mb-2">Phone Number</h4>
-                    <p className="text-xl font-bold leading-relaxed italic">+44 1234 567 890</p>
+                    <p className="text-xl font-bold leading-relaxed italic">01254 396 015</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-8 group">
@@ -112,7 +120,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-black uppercase tracking-widest text-accent-pale mb-2">Email Support</h4>
-                    <p className="text-xl font-bold leading-relaxed italic uppercase">hello@althamcare.org.uk</p>
+                    <p className="text-xl font-bold leading-relaxed italic uppercase">info@althamcare.co.uk</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-8 pt-12 border-t border-white/10">
@@ -121,7 +129,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-black uppercase tracking-widest text-accent-pale mb-2">Visiting Hours</h4>
-                    <p className="text-xl font-bold italic leading-relaxed">Mon - Fri: 09:00 AM - 08:00 PM<br />Sat - Sun: 10:00 AM - 04:00 PM</p>
+                    <p className="text-xl font-bold italic leading-relaxed">Open 24 Hours / 7 Days</p>
                   </div>
                 </div>
               </div>
@@ -144,12 +152,17 @@ const Contact = () => {
                 <MapPin size={48} />
               </div>
               <div className="space-y-4">
-                <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter italic">Find Us in <span className="text-accent not-italic">Lancashire</span></h3>
+                <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter italic text-dark">Find Us in <span className="text-accent not-italic">Lancashire</span></h3>
                 <p className="text-dark/60 text-xl font-bold italic">Schedule a personal tour today.</p>
               </div>
-              <button className="btn btn-primary px-16 py-6 text-sm uppercase font-black tracking-widest">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Altham+Care+Home,+Burnley+Road,+Accrington,+BB5+5TW"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn bg-gradient-to-br from-primary to-primary-light text-white hover:shadow-premium hover:scale-105 px-16 py-6 text-sm uppercase font-black tracking-widest"
+              >
                 Open in Google Maps
-              </button>
+              </a>
             </div>
           </ScrollReveal>
         </div>

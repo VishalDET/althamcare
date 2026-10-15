@@ -32,16 +32,16 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <Phone size={14} className="text-accent-pale" />
-              +44 1234 567 890
+              01254 396 015
             </span>
             <span className="hidden sm:flex items-center gap-2 border-l border-white/20 pl-6">
               <Mail size={14} className="text-accent-pale" />
-              hello@althamcare.org.uk
+              info@althamcare.co.uk
             </span>
           </div>
           <div className="hidden md:flex items-center gap-2">
             <Clock size={14} className="text-accent-pale" />
-            <span>Mon - Fri: 09:00 - 20:00</span>
+            <span>Open 24/7</span>
           </div>
         </div>
       </div>

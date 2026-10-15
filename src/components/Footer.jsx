@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from '../assets/images/altham.png';
+import CQCWidget from './CQCWidget';
 
 const Footer = () => {
   return (
@@ -32,6 +33,9 @@ const Footer = () => {
               </a>
             ))}
           </div>
+          <div className="pt-4">
+            <CQCWidget />
+          </div>
         </div>
 
         <div>
@@ -55,7 +59,7 @@ const Footer = () => {
           <ul className="space-y-5 text-white/60 font-normal">
             <li className="hover:text-white transition-colors cursor-pointer capitalize">Assisted Living</li>
             <li className="hover:text-white transition-colors cursor-pointer capitalize">Dementia Care</li>
-            <li className="hover:text-white transition-colors cursor-pointer capitalize">24/7 Medical Support</li>
+            <li className="hover:text-white transition-colors cursor-pointer capitalize">Entertainment & Activities</li>
             <li className="hover:text-white transition-colors cursor-pointer capitalize">Rehabilitation</li>
             <li className="hover:text-white transition-colors cursor-pointer capitalize">Personal Care</li>
           </ul>
@@ -69,7 +73,7 @@ const Footer = () => {
                 <MapPin className="text-accent-pale" size={20} />
               </div>
               <span className="text-white/70 group-hover:text-white transition-colors font-normal">
-                Althamcare Lane, Burnley Road, BB12 7RT
+                Burnley Road, Accrington, BB5 5TW
               </span>
             </li>
             <li className="flex items-center gap-4 group">
@@ -77,7 +81,7 @@ const Footer = () => {
                 <Phone className="text-accent-pale" size={20} />
               </div>
               <span className="text-white/70 group-hover:text-white transition-colors font-normal">
-                +44 1234 567 890
+                01254 396 015
               </span>
             </li>
             <li className="flex items-center gap-4 group">
@@ -85,7 +89,7 @@ const Footer = () => {
                 <Mail className="text-accent-pale" size={20} />
               </div>
               <span className="text-white/70 group-hover:text-white transition-colors font-normal">
-                hello@althamcare.org.uk
+                info@althamcare.co.uk
               </span>
             </li>
           </ul>

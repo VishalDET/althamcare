@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import CookieConsent from './components/CookieConsent';
 import { Home, About, Services, Contact, PrivacyPolicy } from './pages';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <CookieConsent />
         </>
       )}
     </div>

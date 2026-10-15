@@ -105,9 +105,9 @@ const PrivacyPolicy = () => {
             <ScrollReveal>
               <div className="bg-primary/5 p-12 rounded-[4rem] text-center space-y-8 border border-primary/10">
                 <h2 className="text-3xl font-black text-dark uppercase italic tracking-tighter">Have any questions?</h2>
-                <p className="text-dark/60 font-bold italic">Our data protection officer is available for any clarifications regarding your information.</p>
+                <p className="text-dark/60 font-bold italic">Our team is available for any clarifications regarding your information under the UK GDPR.</p>
                 <div className="flex flex-wrap justify-center gap-6">
-                  <a href="mailto:privacy@althamcare.org.uk" className="btn btn-primary px-10 py-4 shadow-premium">
+                  <a href="mailto:info@althamcare.co.uk" className="btn btn-primary px-10 py-4 shadow-premium">
                     Email Officer
                   </a>
                   <button className="btn btn-secondary px-10 py-4">

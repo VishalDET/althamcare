@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Users, Shield, Target, CheckCircle2, Award, Clock, MapPin } from 'lucide-react';
 import Card from '../components/Card';
 import ScrollReveal from '../components/ScrollReveal';
-import aboutImg from '../assets/images/about.png';
-import galleryImg from '../assets/images/gallery1.png';
+import aboutImg from '../assets/images/rimages/DJI_0050.JPG';
+import galleryImg from '../assets/images/rimages/DJI_0049.JPG';
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About Us | Altham Care Home - Over 25 Years of Care";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Learn about Altham Care Home, a family-owned care provider with over 25 years of experience specialising in residential and respite care for the elderly.");
+    }
+  }, []);
+
   const values = [
     { icon: Heart, title: 'Respect', desc: 'Valuing each resident’s life story and unique preferences.' },
     { icon: Shield, title: 'Independence', desc: 'Supporting autonomy while providing necessary care.' },
@@ -62,26 +70,19 @@ const About = () => {
           <ScrollReveal direction="right">
             <div className="space-y-10">
               <div className="space-y-4">
-                <span className="text-primary font-black tracking-[0.3em] uppercase text-xs">Decades of Trust</span>
-                <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-dark leading-none uppercase italic">Growing with <br /><span className="text-accent not-italic">Lancashire</span></h2>
+                <span className="text-primary font-black tracking-[0.3em] uppercase text-xs">About Us</span>
+                <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-dark leading-none uppercase italic">A Little Bit <br /><span className="text-accent not-italic">About What We Do</span></h2>
               </div>
-              <div className="space-y-6 text-dark/70 text-lg font-medium leading-relaxed">
+              <div className="space-y-6 text-dark/70 text-lg font-medium leading-relaxed italic">
                 <p>
-                  Founded over a decade ago in the picturesque county of Lancashire, Altham Care Home began with a simple yet profound vision: to transform the experience of elderly care in England.
+                  We are a family-owned business with over 25 years of experience specialising in care for the elderly. Our care home has been tastefully furnished and is maintained to a very high standard throughout.
                 </p>
                 <p>
-                  What started as a small community initiative has grown into a leading care center, recognized for our innovative approach to assisted living and dementia support.
+                  Our main aim is to provide the highest quality of care, ensuring a comfortable, supportive and homely environment where individuality, dignity and quality of life are always at the heart of what we do.
                 </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-4">
-                <div className="p-8 bg-secondary rounded-[2rem] border-l-8 border-primary">
-                  <h4 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Our Mission</h4>
-                  <p className="font-bold text-dark/70 italic text-sm">To provide holistic, personalized care that empowers seniors.</p>
-                </div>
-                <div className="p-8 bg-secondary rounded-[2rem] border-l-8 border-accent">
-                  <h4 className="text-sm font-black text-accent uppercase tracking-widest mb-4">Our Vision</h4>
-                  <p className="font-bold text-dark/70 italic text-sm">To be the most trusted name in elderly care standards.</p>
-                </div>
+                <p>
+                  Here at Altham Care Home, we offer both residential and respite care. Our highly trained managers and dedicated team take great pride in supporting our residents through the next chapter of their lives.
+                </p>
               </div>
             </div>
           </ScrollReveal>
@@ -91,8 +92,8 @@ const About = () => {
               <div className="absolute -inset-6 bg-primary/10 rounded-[3rem] rotate-3" />
               <img src={aboutImg} alt="Care story" className="relative rounded-[3rem] shadow-premium z-10 w-full border-8 border-white" />
               <div className="absolute -top-10 -right-10 bg-accent p-12 rounded-[2.5rem] text-white hidden xl:block shadow-premium group transition-transform hover:scale-110">
-                <span className="text-6xl font-black block mb-2 leading-none">10+</span>
-                <span className="uppercase tracking-[0.2em] text-xs font-black text-accent-pale">Years of Heart</span>
+                <span className="text-6xl font-black block mb-2 leading-none">25+</span>
+                <span className="uppercase tracking-[0.2em] text-xs font-black text-accent-pale">Years of Care</span>
               </div>
             </div>
           </ScrollReveal>
